@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+ {% for product in products %}
+    <h6>{{ product.name }}</h6>
+    <a href="{{ product.get_absolute_url }}"><img src="{{ product.avatar.url}}" alt="{{ product.name }}" style="width:50%"></a>
+ {% endfor %}
+
+ 
+{% endblock %} 
